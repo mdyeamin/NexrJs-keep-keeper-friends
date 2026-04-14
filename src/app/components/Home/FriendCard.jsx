@@ -6,8 +6,8 @@ const FriendCard = ({ friend }) => {
   const { name, picture, id, days_since_contact, status, tags } = friend;
   return (
     <Link
-      href={`friend/33`}
-      className="group relative bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-md overflow-hidden"
+      href={`friend/${id}`}
+      className="group relative bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-md overflow-hidden"
     >
       {/* Top Border Animation - Left side */}
       <span className="absolute top-0 left-0 h-[3px] w-1/2 bg-[#244d3f] transition-transform duration-500 scale-x-0 origin-left group-hover:scale-x-100"></span>

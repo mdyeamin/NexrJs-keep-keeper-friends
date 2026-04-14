@@ -11,7 +11,7 @@ const NavBar = () => {
   const navItems = [
     { path: "/", name: "Home", icon: <IoHomeOutline /> },
     { path: "/timeline", name: "TimeLine", icon: <IoMdTime /> },
-    { path: "/states", name: "States", icon: <FaChartLine /> },
+    { path: "/states", name: "States", icon: <FaChartLine /> }
   ];
   return (
     <div className={` navbar bg-base-100 shadow-sm justify-between`}>

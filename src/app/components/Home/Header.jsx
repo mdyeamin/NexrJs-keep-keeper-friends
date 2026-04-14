@@ -27,7 +27,7 @@ const Header = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           
           {/* Card 1: Total Friends */}
-          <div className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
+          <div className="group bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
             <div className="mb-4 p-3 bg-blue-50 rounded-full group-hover:bg-[#244d3f]/10 transition-colors">
               <FaUsers className="text-blue-500" size={24} />
             </div>
@@ -37,7 +37,7 @@ const Header = () => {
           </div>
 
           {/* Card 2: On Track */}
-          <div className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
+          <div className="group bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
             <div className="mb-4 p-3 bg-green-50 rounded-full group-hover:bg-[#244d3f]/10 transition-colors">
               <FaCheckCircle className="text-green-500" size={24} />
             </div>
@@ -47,7 +47,7 @@ const Header = () => {
           </div>
 
           {/* Card 3: Need Attention */}
-          <div className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
+          <div className="group bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
             <div className="mb-4 p-3 bg-yellow-50 rounded-full group-hover:bg-[#244d3f]/10 transition-colors">
               <FaExclamationTriangle className="text-yellow-500" size={24} />
             </div>
@@ -57,7 +57,7 @@ const Header = () => {
           </div>
 
           {/* Card 4: Interactions */}
-          <div className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
+          <div className="group bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center justify-center relative overflow-hidden">
             <div className="mb-4 p-3 bg-purple-50 rounded-full group-hover:bg-[#244d3f]/10 transition-colors">
               <FaSyncAlt className="text-purple-500" size={24} />
             </div>
