@@ -46,7 +46,7 @@ const NavBar = () => {
        </Link>
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
+        <ul class="menu menu-horizontal px-1 space-x-5">
           {navItems.map((nav,i)=> <NavButton key={i} nav={nav}/>
           )}
         </ul>
