@@ -44,7 +44,7 @@ const NavBar = () => {
         </div>
         <Link href="/" className=" text-2xl font-semibold">
          {" "}
-         <span className="font-bold">Keep</span>
+         <span className="font-bold">Keen</span>
           <span className="text-[#244d3f]">Keeper</span>
        </Link>
       </div>

@@ -1,5 +1,7 @@
+import QuickButton from "@/app/components/Shared/QuickButton";
+import { FriendsContext } from "@/app/contexts/FriendsProvider";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import {
   FiArchive,
   FiClock,
@@ -9,9 +11,11 @@ import {
   FiVideo,
 } from "react-icons/fi";
 
-const page = async ({ params }) => {
+const DetailsPage = async ({ params }) => {
+
+  
   const { id } = await params;
-  console.log(id);
+
 
   const res = await (
     await fetch(
@@ -20,8 +24,7 @@ const page = async ({ params }) => {
   ).json();
 
   const friends = await res.friends;
-  //   console.log(friends);
-  console.log();
+
 
   const {
     name,
@@ -34,7 +37,6 @@ const page = async ({ params }) => {
     goal,
     next_due_date,
   } = friends.find((friend) => friend.id === Number(id));
-  console.log(name);
 
   return (
     <div className="bg-[#f8fafc] min-h-screen p-4 md:p-10 font-sans text-[#1e293b]">
@@ -140,26 +142,7 @@ const page = async ({ params }) => {
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
             <h3 className="text-lg font-bold mb-6">Quick Check-In</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <button className="bg-[#f8fafc] hover:bg-slate-100 border border-slate-100 p-6 rounded-lg flex flex-col items-center gap-3 transition-all group">
-                <div className="p-3 bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform">
-                  <FiPhone className="text-xl" />
-                </div>
-                <span className="font-semibold text-sm">Call</span>
-              </button>
-
-              <button className="bg-[#f8fafc] hover:bg-slate-100 border border-slate-100 p-6 rounded-lg flex flex-col items-center gap-3 transition-all group">
-                <div className="p-3 bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform">
-                  <FiMessageSquare className="text-xl" />
-                </div>
-                <span className="font-semibold text-sm">Text</span>
-              </button>
-
-              <button className="bg-[#f8fafc] hover:bg-slate-100 border border-slate-100 p-6 rounded-lg flex flex-col items-center gap-3 transition-all group">
-                <div className="p-3 bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform">
-                  <FiVideo className="text-xl" />
-                </div>
-                <span className="font-semibold text-sm">Video</span>
-              </button>
+              <QuickButton name={name}/>
             </div>
           </div>
         </div>
@@ -168,4 +151,4 @@ const page = async ({ params }) => {
   );
 };
 
-export default page;
+export default DetailsPage;

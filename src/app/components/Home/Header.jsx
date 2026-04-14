@@ -9,7 +9,7 @@ const Header = () => {
         {/* Header Section */}
         <div className="mb-5">
           <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-[#1e293b] tracking-tight mb-4">
-            Friends to keep close in your life
+            Friends to keen close in your life
           </h1>
           <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
             Your personal shelf of meaningful connections. Browse, tend, and nurture the 
