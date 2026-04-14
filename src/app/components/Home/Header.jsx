@@ -3,7 +3,7 @@ import { FaCheckCircle, FaExclamationTriangle, FaPlus, FaSyncAlt, FaUsers } from
 
 const Header = () => {
     return (
-        <section className="bg-[#f8fafc] py-16 px-4 sm:px-6 lg:px-8 min-h-screen font-sans">
+        <section className={` bg-[#f8fafc] py-16 px-4 sm:px-6 lg:px-8 font-geist`}>
       <div className="max-w-7xl mx-auto text-center">
         
         {/* Header Section */}

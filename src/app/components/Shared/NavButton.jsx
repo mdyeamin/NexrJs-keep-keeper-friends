@@ -3,9 +3,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
+
 const NavButton = ({ nav }) => {
   const pathName = usePathname();
-  console.log(pathName);
 
   return (
     <li>
@@ -19,7 +19,7 @@ const NavButton = ({ nav }) => {
         {nav.name}
 
         <span
-          className={`absolute bottom-0 left-0 h-[2px] w-full bg-[#244d3f] transition-transform duration-300 origin-left
+          className={`absolute bottom-0 left-0 h-[2px] w-full hover transition-transform duration-300 origin-left
     ${pathName === nav.path ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
         ></span>
       </Link>

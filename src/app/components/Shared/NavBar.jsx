@@ -2,7 +2,10 @@ import Link from "next/link";
 import { FaChartLine } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
-import NavButton from "../ui/NavButton";
+import NavButton from "./NavButton";
+
+
+
 
 const NavBar = () => {
   const navItems = [
@@ -11,13 +14,13 @@ const NavBar = () => {
     { path: "/states", name: "States", icon: <FaChartLine /> },
   ];
   return (
-    <div class="navbar bg-base-100 shadow-sm justify-between">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+    <div className={` navbar bg-base-100 shadow-sm justify-between`}>
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabindex="0" role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -33,7 +36,7 @@ const NavBar = () => {
           </div>
           <ul
             tabindex="-1"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
              {navItems.map((nav,i)=> <NavButton key={i} nav={nav}/>
           )}
@@ -45,8 +48,8 @@ const NavBar = () => {
           <span className="text-[#244d3f]">Keeper</span>
        </Link>
       </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 space-x-5">
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 space-x-5">
           {navItems.map((nav,i)=> <NavButton key={i} nav={nav}/>
           )}
         </ul>
