@@ -15,14 +15,7 @@ const TimeLine = () => {
         </div>
       </div>
 
-      {/* Filter Dropdown */}
-      <div className="mb-8">
-        <select className="w-full md:w-64 p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-200">
-          <option>Filter timeline</option>
-          <option>Meetup</option>
-          <option>Text</option>
-        </select>
-      </div>
+   
 
       {/* Timeline Items */}
       <div className="space-y-4">

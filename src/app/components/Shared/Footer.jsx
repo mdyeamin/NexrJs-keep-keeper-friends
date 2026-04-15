@@ -11,7 +11,7 @@ const Footer = () => {
           KeenKeeper
         </h2>
 
-        <p className="max-w-xl text-xs md:text-sm text-gray-200 mb-6 leading-snug">
+        <p className="text-xs md:text-sm text-gray-200 mb-6 leading-snug">
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>
