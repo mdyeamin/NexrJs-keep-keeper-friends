@@ -1,11 +1,13 @@
 "use client";
 import { FriendsContext } from "@/app/contexts/FriendsProvider";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { HiChevronDown } from "react-icons/hi";
 
 const TimeLineCard = () => {
-  const { friendInfo } = useContext(FriendsContext);
-  const [filterType, setFilterType] = useState(friendInfo);
+  const { friendInfo ,
+    filterType,
+     setFilterType} = useContext(FriendsContext);
+ 
   console.log(friendInfo);
   if (filterType.length < 1) {
     return (
@@ -50,7 +52,7 @@ const TimeLineCard = () => {
   }
   const handleTimelineByType = (e) => {
     if (e.target.value === "All") {
-      setFilterType([...friendInfo], "all log");
+      setFilterType([...friendInfo]);
     }
     if (e.target.value === "Call") {
       const call = friendInfo.filter((info) => info.status === "call");
@@ -68,7 +70,6 @@ const TimeLineCard = () => {
       setFilterType(video);
     }
   };
-  handleTimelineByType;
   console.log(filterType);
 
   return (

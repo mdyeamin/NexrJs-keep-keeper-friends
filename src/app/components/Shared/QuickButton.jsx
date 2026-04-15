@@ -24,16 +24,14 @@ const QuickButton = ({ name }) => {
       name,
       fullDate,
     };
-   
-      setFriendInfo([...friendInfo, info]);
-      toast.success(`${name} added to the timeline`, {
-        position: "bottom-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        icon: <FiPhone className="text-xl" />,
-      });
-   
-   
+
+    setFriendInfo([...friendInfo, info]);
+    toast.success(`${name} added to the timeline`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      icon: <FiPhone className="text-xl" />,
+    });
   };
   const handleText = () => {
     const today = new Date();
@@ -51,15 +49,13 @@ const QuickButton = ({ name }) => {
       fullDate,
     };
 
-
-      setFriendInfo([...friendInfo, info]);
-      toast.success(`${name} added to the timeline`, {
-        position: "bottom-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        icon: <FiMessageSquare className="text-xl" />,
-      });
-  
+    setFriendInfo([...friendInfo, info]);
+    toast.success(`${name} added to the timeline`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      icon: <FiMessageSquare className="text-xl" />,
+    });
   };
   const handleVideo = () => {
     const today = new Date();
@@ -76,16 +72,14 @@ const QuickButton = ({ name }) => {
       name,
       fullDate,
     };
-    
 
-      setFriendInfo([...friendInfo, info]);
-      toast.success(`${name} added to the timeline`, {
-        position: "bottom-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        icon: <FiVideo className="text-xl" />,
-      });
-    
+    setFriendInfo([...friendInfo, info]);
+    toast.success(`${name} added to the timeline`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      icon: <FiVideo className="text-xl" />,
+    });
   };
   console.log(friendInfo, "info");
 
