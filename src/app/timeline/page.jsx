@@ -15,7 +15,6 @@ const TimeLine = () => {
         </div>
       </div>
 
-   
 
       {/* Timeline Items */}
       <div className="space-y-4">
