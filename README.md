@@ -36,6 +36,6 @@ Displays a chronological record of all interactions, helping users review their 
 
 ```bash
 git clone https://github.com/mdyeamin/NextJs-keen-keeper-friends
-cd keenkepper
+cd NextJs-keen-keeper-friends
 npm install
 npm run dev

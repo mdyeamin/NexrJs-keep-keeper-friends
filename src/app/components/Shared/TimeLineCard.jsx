@@ -5,8 +5,9 @@ import { HiChevronDown } from "react-icons/hi";
 
 const TimeLineCard = () => {
   const { friendInfo ,filterType, setFilterType} = useContext(FriendsContext);
+ console.log(friendInfo,"friend");
  
-  console.log(friendInfo);
+  console.log(filterType);
   // if (filterType.length < 1) {
   //   return (
   //     <div className="flex flex-col items-center justify-center min-h-[400px] p-8 text-center bg-white rounded-2xl border-2 border-dashed border-slate-200">

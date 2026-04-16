@@ -1,15 +1,14 @@
 "use client";
 import { useContext } from "react";
 import { FriendsContext } from "../contexts/FriendsProvider";
-import { Bar, Legend, Pie, PieChart, Tooltip } from "recharts";
-import { RechartsDevtools } from "@recharts/devtools";
+import { Legend, Pie, PieChart, Tooltip } from "recharts";
 
 const States = () => {
-  const { filterType } = useContext(FriendsContext);
+  const { friendInfo } = useContext(FriendsContext);
 
-  const call = filterType.filter((call) => call.status === "call");
-  const text = filterType.filter((call) => call.status === "text");
-  const video = filterType.filter((call) => call.status === "video");
+  const call = friendInfo.filter((call) => call.status === "call");
+  const text = friendInfo.filter((text) => text.status === "text");
+  const video = friendInfo.filter((video) => video.status === "video");
   //   console.log(call.length, "call data");
   // console.log(text, "text data");
   // console.log(video, "video data");
