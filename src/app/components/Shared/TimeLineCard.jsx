@@ -15,6 +15,8 @@ const TimeLineCard = () => {
     setFilterType,
     selectedFilter,
     setSelectedFilter,
+    searchText,  
+  setSearchText,
   } = useContext(FriendsContext);
 
   const handleTimelineByType = (e) => {
@@ -31,7 +33,7 @@ const TimeLineCard = () => {
 
   const handleSearch = (e) => {
     const value = e.target.value;
-    // console.log(value);
+    setSearchText(value);
     if(value.length>1){
 
       const searchByName = friendInfo.filter((search) =>
@@ -72,6 +74,7 @@ const TimeLineCard = () => {
               <input
                 type="text"
                 placeholder="Search by name..."
+                value={searchText}
                 onChange={handleSearch}
                 className="w-full p-3 pl-10 bg-white border border-slate-200 rounded-xl text-slate-700 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/10 focus:border-emerald-500 shadow-sm transition-all duration-300"
               />
