@@ -2,7 +2,11 @@
 import { FriendsContext } from "@/app/contexts/FriendsProvider";
 import Link from "next/link";
 import { useContext } from "react";
-import { HiChevronDown, HiOutlineChatAlt2 } from "react-icons/hi";
+import {
+  HiChevronDown,
+  HiOutlineChatAlt2,
+  HiOutlineSearch,
+} from "react-icons/hi";
 
 const TimeLineCard = () => {
   const {
@@ -26,6 +30,11 @@ const TimeLineCard = () => {
     }
   };
 
+  const handleSearch = (e)=>{
+console.log(e);
+
+  }
+
   console.log(filterType);
 
   return (
@@ -33,7 +42,8 @@ const TimeLineCard = () => {
       {
         <div className="div">
           {/* Filter Dropdown */}
-          <div className="mb-8">
+          <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            {/* Left Side: Filter Dropdown */}
             <div className="relative w-full md:w-64">
               <select
                 value={selectedFilter}
@@ -45,10 +55,22 @@ const TimeLineCard = () => {
                 <option>Text</option>
                 <option>Video</option>
               </select>
-
-              {/* React Icon - Custom Arrow */}
               <span className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                 <HiChevronDown className="text-lg" />
+              </span>
+            </div>
+
+            {/* Right Side: Search Box */}
+            <div className="relative w-full md:w-64">
+              <input
+                type="text"
+                placeholder="Search by name..."
+                onChange={handleSearch}
+                className="w-full p-3 pl-10 bg-white border border-slate-200 rounded-xl text-slate-700 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/10 focus:border-emerald-500 shadow-sm transition-all duration-300"
+              />
+              {/* Search Icon */}
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400">
+                <HiOutlineSearch className="text-lg" />
               </span>
             </div>
           </div>
