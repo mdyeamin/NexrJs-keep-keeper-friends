@@ -68,7 +68,10 @@ const TimeLineCard = () => {
                 </p>
               </div>
 
-              <Link href="/" className="mt-6 text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors">
+              <Link
+                href="/"
+                className="mt-6 text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors"
+              >
                 Start a conversation →
               </Link>
             </div>
@@ -77,103 +80,51 @@ const TimeLineCard = () => {
               {filterType.map((timeline, i) => (
                 <div
                   key={i}
-                  className="group relative flex items-center p-5 bg-white rounded-xl shadow-sm overflow-hidden border border-slate-100"
+                  className="group relative flex items-center p-5 bg-white border border-slate-100 rounded-2xl shadow-sm transition-all duration-500 hover:shadow-xl overflow-hidden cursor-pointer"
                 >
-                  {/* Gravity Border SVG */}
-                  <svg
-                    className="absolute inset-0 w-full h-full pointer-events-none rounded-xl"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                  >
-                    <rect
-                      x="0"
-                      y="0"
-                      width="100"
-                      height="100"
-                      rx="4"
-                      fill="none"
-                      stroke="url(#gravityGradient)"
-                      strokeWidth="2"
-                      strokeDasharray="20 80"
-                      className="animate-gravity-border group-hover:pause"
-                      style={{
-                        vectorEffect: "non-scaling-stroke",
-                      }}
-                    />
-                    <defs>
-                      <linearGradient
-                        id="gravityGradient"
-                        x1="0%"
-                        y1="0%"
-                        x2="100%"
-                        y2="0%"
-                      >
-                        <stop offset="0%" stopColor="#059669" />
-                        <stop offset="100%" stopColor="#34d399" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  {/* Left Accent Bar */}
+                  <div className="absolute left-0 top-0 h-full w-1.5 bg-emerald-600 z-20 transition-all duration-300 group-hover:w-2"></div>
 
-                  {/* Content */}
-                  <div className="relative z-10 flex-shrink-0 w-12 h-12 flex items-center justify-center bg-slate-50 rounded-full text-2xl">
+                  {/* Right Side Rounded Shape (Hover Effect) */}
+                  <div className="absolute -right-12 -top-12 w-32 h-32 bg-emerald-50 rounded-full transition-all duration-700 ease-in-out group-hover:scale-[10] group-hover:bg-emerald-600/5 group-hover:-translate-x-full z-0"></div>
+
+                  {/* Icon Container */}
+                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-slate-50 text-2xl transition-all duration-500 group-hover:bg-white group-hover:shadow-md group-hover:scale-110">
                     {timeline.icon}
                   </div>
 
-                  <div className="relative z-10 ml-4 flex-grow">
-                    <div className="flex flex-wrap items-center gap-1">
-                      <span className="font-bold text-emerald-800 text-lg">
+                  {/* Content Area */}
+                  <div className="relative z-10 flex flex-col flex-grow">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-bold text-slate-800 text-lg transition-colors duration-300 group-hover:text-emerald-900">
                         {timeline.status}
                       </span>
-                      <span className="text-slate-500">
-                        With {timeline.name}
+                      <span className="text-slate-500 text-sm font-medium">
+                        • With {timeline.name}
                       </span>
                     </div>
-                    <div className="text-slate-400 text-sm font-medium">
+
+                    <div className="text-slate-400 text-xs font-semibold mt-1 flex items-center gap-1 uppercase tracking-wider">
+                      <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
                       {timeline.fullDate}
                     </div>
                   </div>
 
-                  {/* Custom Styles for Gravity Animation */}
-                  <style jsx global>{`
-                    .animate-gravity-border {
-                      animation: gravityMove 3s infinite;
-                    }
-
-                    @keyframes gravityMove {
-                      /* Top Right to Top Left (আস্তে উঠবে) */
-                      0% {
-                        stroke-dashoffset: 0;
-                        animation-timing-function: ease-out;
-                      }
-
-                      /* Left Side Down (জোরে পড়বে - Gravity) */
-                      25% {
-                        stroke-dashoffset: -25;
-                        animation-timing-function: ease-in;
-                      }
-
-                      /* Bottom Left to Bottom Right (গতি বজায় থাকবে) */
-                      50% {
-                        stroke-dashoffset: -50;
-                        animation-timing-function: ease-out;
-                      }
-
-                      /* Right Side Up (আস্তে উঠবে - Against Gravity) */
-                      75% {
-                        stroke-dashoffset: -75;
-                        animation-timing-function: ease-in;
-                      }
-
-                      100% {
-                        stroke-dashoffset: -100;
-                      }
-                    }
-
-                    .group:hover .animate-gravity-border {
-                      animation-direction: reverse;
-                      stroke-color: #10b981;
-                    }
-                  `}</style>
+                  {/* Hover Arrow (Optional extra touch) */}
+                  <div className="relative z-10 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-emerald-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
                 </div>
               ))}
             </div>

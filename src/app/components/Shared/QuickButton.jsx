@@ -45,6 +45,7 @@ const QuickButton = ({ name }) => {
     const info = {
       status: "text",
       icon: <FiMessageSquare className="text-xl" />,
+      
       name,
       fullDate,
     };
